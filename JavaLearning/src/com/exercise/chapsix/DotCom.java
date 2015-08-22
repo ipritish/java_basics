@@ -5,8 +5,6 @@ import java.util.ArrayList;
 public class DotCom 
 {
 	private ArrayList<String> locationCells;
-	private int numOfHits = 0;
-
 	public void setLocationCells(ArrayList<String> locations) 
 	{
 		locationCells = locations;
