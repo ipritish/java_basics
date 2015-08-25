@@ -9,6 +9,8 @@ public class TestInheritence {
 		wolf.makeNoise();
 		wolf.sleep();
 		wolf.roam();
+		wolf.picture = 2;
+		
 	}
 
 }

@@ -2,7 +2,7 @@ package com.exercise.chapseven;
 
 public abstract class Animal 
 {
-	private int picture;
+	public int picture;
 	private String food;
 	private int hunger;
 	private String boundries;
