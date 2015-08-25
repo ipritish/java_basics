@@ -1,6 +1,6 @@
 package com.exercise.chapseven;
 
-public class Canine extends Animal 
+abstract public class Canine extends Animal 
 {
 	@Override
 	public void roam()

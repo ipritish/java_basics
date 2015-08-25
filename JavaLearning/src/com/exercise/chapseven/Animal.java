@@ -1,6 +1,6 @@
 package com.exercise.chapseven;
 
-public abstract class Animal 
+abstract public class Animal 
 {
 	public int picture;
 	private String food;
