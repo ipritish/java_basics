@@ -1,4 +1,4 @@
-package com.exrecise.chapeleven;
+package com.exercise.chapeleven;
 
 public class TestException {
 

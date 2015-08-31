@@ -1,4 +1,4 @@
-package com.exrecise.chapeleven;
+package com.exercise.chapeleven;
 
 import javax.sound.midi.MidiSystem;
 import javax.sound.midi.MidiUnavailableException;

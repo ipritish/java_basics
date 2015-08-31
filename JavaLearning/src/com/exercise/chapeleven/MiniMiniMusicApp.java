@@ -1,4 +1,4 @@
-package com.exrecise.chapeleven;
+package com.exercise.chapeleven;
 
 import javax.sound.midi.MidiEvent;
 import javax.sound.midi.MidiSystem;
