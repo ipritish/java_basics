@@ -1,6 +1,6 @@
 package com.example.algos;
 
 public class Node {
-	int id;
+	String name;
 	Node next;
 }
