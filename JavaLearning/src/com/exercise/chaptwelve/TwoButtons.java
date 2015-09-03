@@ -39,6 +39,7 @@ public class TwoButtons {
 		frame.getContentPane().add(BorderLayout.WEST,label);
 		
 		frame.setSize(400,300);
+		frame.setResizable(false);
 		frame.setVisible(true);
 		
 	}
