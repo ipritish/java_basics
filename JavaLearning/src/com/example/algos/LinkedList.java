@@ -1,5 +1,9 @@
 package com.example.algos;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 public class LinkedList {
 	
 	
@@ -45,7 +49,7 @@ public class LinkedList {
 	
 	public static Node getNode(Node start, String nodeName)
 	{
-		if (start.name == nodeName)
+		if (start.name.equals(nodeName))
 			return start;
 		else
 			return getNode(start.next,nodeName);
@@ -79,20 +83,78 @@ public class LinkedList {
 		
 	}
 	
+	public static String getUserInput(String prompt) 
+	{
+		String inputLine = null;
+		System.out.println(prompt);
+		try
+		{
+			BufferedReader is = new BufferedReader(new InputStreamReader(System.in));
+			inputLine = is.readLine();
+			if(inputLine.length() == 0)
+				return null;
+			
+		}
+		catch (IOException io)
+		{
+			io.printStackTrace();
+		}
+		return inputLine;
+	}
+	
 	public static void main(String[] args) 
 	{
 		Node head = headInitializer();
-		Node first = createNode("First After Head");
-		addNodeAtEnd(head, first);
-		Node second = createNode("Second After Head");
-		addNodeAtEnd(head, second);
-		Node Random = createNode("Random");
-		insertNode(head, Random, "Starting Point");
-		System.out.println("After Insertion");
-		traverseNode(head);
-		deleteNode(first, head);
-		System.out.println("After Deletion");
-		traverseNode(head);
+		String userInput;
+		boolean exit = false;
+		while (exit == false)
+		{
+			System.out.println("Options are \t1.Add\t2.Delete\t3.Print\t4.Insert\t5.Exit\tType the full strings");
+			userInput = getUserInput(" ");
+			switch (userInput) {
+			case "Add":
+				System.out.println("Add a node in the end give a value for it");
+				String valueNode = getUserInput(" ");
+				Node tobeAdded = createNode(valueNode);
+				addNodeAtEnd(head, tobeAdded);
+				traverseNode(head);
+				break;
+			case "Delete":
+				System.out.println("Which node to be deleted");
+				traverseNode(head);
+				String nodeName = getUserInput(" ");
+				deleteNode(getNode(head, nodeName), head);
+				System.out.println("");
+				traverseNode(head);
+				break;
+			case "Print":
+				traverseNode(head);
+				break;
+			case "Insert":
+				System.out.println("Insert a node give a value for it");
+				String valueInsert = getUserInput(" ");
+				Node tobeInserted = createNode(valueInsert);
+				System.out.println("Insert After");
+				traverseNode(head);
+				String insertAfter = getUserInput(" ");
+				//Node afterThis = getNode(head, insertAfter);
+				insertNode(head, tobeInserted, insertAfter);
+				traverseNode(head);
+				break;
+			case "Exit":
+				exit = true;
+				System.out.println("Exiting...");
+				break;
+	
+			default:
+				exit = true;
+				System.out.println("Exiting...");
+				break;
+			}
+		}
+		
+		//System.out.println("After Deletion");
+		//traverseNode(head);
 	}
 
 }
