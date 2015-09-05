@@ -58,6 +58,27 @@ public class LinkedList {
 		
 	}
 	
+	public static void deleteNode(Node tobeDeleted, Node head)
+	{
+		Node prevNode;
+		Node nextNode;
+
+		if(head.next != null)
+		{
+			if (head.next == tobeDeleted)
+			{
+				prevNode = head;
+				nextNode = head.next.next;
+				prevNode.next = nextNode;
+			}
+			else
+			{
+				deleteNode(tobeDeleted,head.next);
+			}
+		}
+		
+	}
+	
 	public static void main(String[] args) 
 	{
 		Node head = headInitializer();
@@ -67,6 +88,10 @@ public class LinkedList {
 		addNodeAtEnd(head, second);
 		Node Random = createNode("Random");
 		insertNode(head, Random, "Starting Point");
+		System.out.println("After Insertion");
+		traverseNode(head);
+		deleteNode(first, head);
+		System.out.println("After Deletion");
 		traverseNode(head);
 	}
 
