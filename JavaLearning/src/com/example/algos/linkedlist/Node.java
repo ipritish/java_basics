@@ -1,4 +1,4 @@
-package com.example.algos;
+package com.example.algos.linkedlist;
 
 public class Node {
 	String name;

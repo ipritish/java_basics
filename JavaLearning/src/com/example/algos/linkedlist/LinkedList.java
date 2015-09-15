@@ -1,4 +1,4 @@
-package com.example.algos;
+package com.example.algos.linkedlist;
 
 import java.io.BufferedReader;
 import java.io.IOException;
