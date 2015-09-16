@@ -16,6 +16,7 @@ public class BinaryTree {
 		root.leftChild = firstLeft;
 		TreeNode firstRight = createNode("First Right");
 		root.rightChild = firstRight;
+		firstRight.rightChild = createNode("Right Right");
 		traverseTree(root);
 	}
 	
@@ -34,8 +35,8 @@ public class BinaryTree {
 			System.out.println(root.nodeName);
 			if(root.leftChild != null)
 				traverseTree(root.leftChild);
-			else if(root.rightChild != null)
-				traverseTree(root.leftChild);
+			if(root.rightChild != null)
+				traverseTree(root.rightChild);
 		}
 		
 	}
