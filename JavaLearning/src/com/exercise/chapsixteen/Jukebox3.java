@@ -9,6 +9,8 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashSet;
+import java.util.TreeSet;
 
 public class Jukebox3 {
 
@@ -34,6 +36,12 @@ public class Jukebox3 {
 		ArtistCompare artistCompare = new ArtistCompare();
 		Collections.sort(songList, artistCompare);
 		System.out.println(songList);
+		HashSet<Song> songSet = new HashSet<Song>();
+		songSet.addAll(songList);
+		System.out.println(songSet);
+		TreeSet<Song> songTSet = new TreeSet<Song>();
+		songTSet.addAll(songList);
+		System.out.println(songTSet);
 	}
 	
 	void getSongs(){
