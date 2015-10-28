@@ -1,4 +1,4 @@
-package com.example.chapsixteen;
+package com.exercise.chapsixteen;
 
 import java.io.BufferedReader;
 import java.io.File;
